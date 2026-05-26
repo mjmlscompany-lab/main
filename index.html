@@ -2,42 +2,75 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>통합 배너 규격화</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합 배너 규격화 시스템</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700;900&display=swap" rel="stylesheet">
     <style>
-        /* 메인 인트로 화면 스타일 */
-        body { 
-            margin: 0; height: 100vh; 
-            display: flex; flex-direction: column; align-items: center; justify-content: center; 
-            background: #1a1a1a; color: #fff; font-family: 'Malgun Gothic', sans-serif; 
-        }
-        h1 { margin-bottom: 60px; color: #2ecc71; font-size: 32px; }
-        .btn-wrapper { display: flex; gap: 40px; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
         
-        .main-btn { 
-            padding: 40px 80px; 
-            font-size: 24px; 
-            font-weight: bold; 
-            color: #fff; 
-            background: #333; 
-            border: 2px solid #444; 
-            border-radius: 25px; 
-            cursor: pointer; 
-            transition: 0.3s; 
-            text-decoration: none; 
+        body {
+            /* 배경 투명도를 0.3으로 더 줄여서 배경을 훨씬 밝게 처리 */
+            background-color: rgba(26, 26, 26, 0.3); 
+            font-family: 'Noto Sans KR', sans-serif;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .main-btn:hover { 
-            background: #2ecc71; 
-            color: #000; 
-            border-color: #2ecc71; 
-            transform: scale(1.05); 
+
+        .portal-card {
+            background-color: #F4F4F4;
+            width: 800px;
+            padding: 50px 60px 65px;
+            border-radius: 25px; 
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* 그림자도 더 부드럽게 조정 */
+            text-align: center;
+        }
+
+        .portal-title {
+            color: #333333; 
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+        }
+
+        .button-row { display: flex; justify-content: center; gap: 20px; }
+
+        .nav-button {
+            flex: 1;
+            padding: 22px 0;
+            font-size: 20px;
+            font-weight: 900;
+            text-decoration: none;
+            color: #FF6B9D;
+            background-color: #FFFFFF;
+            border: 3px solid #FF6B9D;
+            border-radius: 12px; 
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-button:hover {
+            background-color: #FF6B9D;
+            color: #FFFFFF;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(255, 107, 157, 0.2);
         }
     </style>
 </head>
 <body>
-    <h1>통합 배너 규격화</h1>
-    <div class="btn-wrapper">
-        <a href="https://mjmlscompany-lab.github.io/banner/" class="main-btn">통합 배너 작업</a>
-        <a href="https://mjmlscompany-lab.github.io/top_banner/" class="main-btn">띠배너 생성기</a>
+
+    <div class="portal-card">
+        <h1 class="portal-title">통합 배너 규격화</h1>
+
+        <div class="button-row">
+            <a href="https://mjmlscompany-lab.github.io/banner/" class="nav-button">통합 배너 작업</a>
+            <a href="https://mjmlscompany-lab.github.io/top_banner/" class="nav-button">띠배너 생성기</a>
+        </div>
     </div>
+
 </body>
 </html>
